@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/132099775?v=4" type="image/x-icon">
+    <title>Kollcaku Lutfi</title>
+    <!-- CDN Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- 
+      FONTAWESOME
+
+      CDN FontAwesome 
+      Url: https://fontawesome.com/
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Costum Style.css -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- 
+      VUE.JS
+
+      Script CDN Vue.js
+      Url: https://vuejs.org
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- 
+      SWEETALERT 2
+
+      Script CDN sweetalert 2 Library 
+      Url: https://sweetalert2.github.io/
+    -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body data-speed="5">
+    <div class="overlay"></div>
+    <div id="app" class="container">
+        <div class="box text-center">
+          <div class="box-img">
+            <img :src="url" :alt="alt" class="rounded-circle">
+            <div class="spinner-border text-dark" style="width: 300px; height: 300px;position: absolute;" role="status">
+            </div>
+          </div>
+          <h1 class="text-light mt-3">{{ title }}</h1>
+          <div class="row">
+            <div class="col-md">
+            </div>
+            <div class="col-md mt-2 bg-light rounded-2 icon">
+              <div v-for="(item, index) in icons" :key="index" class="button" @click="copyText(index)">
+                <div :data-href="item.http" target="_blank" :data-key="index">
+                  <i :class="item.icon"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+            </div>
+          </div>
+          <footer class="mt-5 text-center">
+            <!-- 
+              Inserimento dell'anno in modo dinamico.
+              L'anno verrà cambiato in automatico in base all'anno in cui siamo.
+              Puoi vedere in ./assets/script/app.js
+            -->
+            ©{{year}}-{{year+1}} Kollcaku Lutfi
+          </footer>   
+    </div>
+    
+    <!-- Costum JavaScriptFile -->
+    <script src="./assets/script/app.js"></script>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
